@@ -25,9 +25,18 @@
   <div class="cabeca"></div>
   <div class="boneco"></div>
 
-  <audio id="sanfona-increase" src="audio/increasing.mp3" loop="loop"></audio>
-  <audio id="sanfona-decrease" src="audio/decreasing.mp3" loop="loop"></audio>
-  <audio src="audio/bg.mp3" autoplay loop="loop"></audio>
+  <audio id="sanfona-increase" loop>
+    <source src="audio/increasing.mp3">
+    <source src="audio/increasing.ogg">
+  </audio>
+  <audio id="sanfona-decrease" loop>
+    <source src="audio/decreasing.mp3">
+    <source src="audio/decreasing.ogg">
+  </audio>
+  <audio autoplay loop>
+    <source src="audio/bg.mp3">
+    <source src="audio/bg.ogg">
+  </audio>
 
   <a href="https://github.com/html5-pro/sanfona"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
 
