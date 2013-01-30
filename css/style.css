@@ -1,0 +1,177 @@
+body {
+    background-color:#b0af8e;
+  background-image: -webkit-radial-gradient(circle, transparent 50%, rgba(0,0,0,.2));
+  background-image: -moz-radial-gradient(circle, transparent 50%, rgba(0,0,0,.2));
+  background-image: -o-radial-gradient(circle, transparent 50%, rgba(0,0,0,.2));
+  background-image: -ms-radial-gradient(circle, transparent 50%, rgba(0,0,0,.2));
+  background-image: radial-gradient(circle, transparent 50%, rgba(0,0,0,.2));
+}
+@font-face {
+    font-family: 'xylogravuraregular';
+    src: url('xylogravura-webfont.eot');
+    src: url('xylogravura-webfont.eot?#iefix') format('embedded-opentype'),
+         url('xylogravura-webfont.woff') format('woff'),
+         url('xylogravura-webfont.ttf') format('truetype'),
+         url('xylogravura-webfont.svg#xylogravuraregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+h1 {
+  position: absolute;
+  z-index:1;
+  top:0;
+  left:0;
+  right:0;
+  font-family: 'xylogravuraregular';
+  font-size:50px;
+  line-height: 1em;
+  font-weight: normal;
+  color:#4c3315;
+  letter-spacing: -.05em;
+  text-align:center;
+}
+.credits {
+  font: normal normal 16px/1em arial;
+  position: absolute;
+  padding:5px;
+  bottom:10px;
+  left:0;
+  right:0;
+  display: block;
+  font-size:14px;
+  color:#202020;
+  text-align:center;
+}
+.credits a {color:#369;}
+.boneco {
+    position:relative;
+    z-index:3;
+    left: -32px;
+    top:-3px;
+    margin: 0 auto;
+    width:325px;
+    height:420px;
+    display:block;
+    background: transparent url(../img/boneco.png) no-repeat 0 0;
+}
+.cabeca {
+  position: relative;
+  z-index:2;
+    margin: 75px auto 0;
+    width:216px;
+    height:223px;
+    background:transparent url(../img/cabeca.png) 0 0;
+  -webkit-animation: cabeca 2s infinite step-end 0s;
+     -moz-animation: cabeca 2s infinite step-end 0s;
+       -o-animation: cabeca 2s infinite step-end 0s;
+          animation: cabeca 2s infinite step-end 0s;
+}
+
+@-webkit-keyframes cabeca {
+  0%, 100%   {background-position: right 0;}
+  15%, 95% {background-position: 0 0;}
+}
+@-moz-keyframes cabeca {
+  0%, 100%   {background-position: right 0;}
+  15%, 95% {background-position: 0 0;}
+}
+@-o-keyframes cabeca {
+  0%, 100%   {background-position: right 0;}
+  15%, 95% {background-position: 0 0;}
+}
+@keyframes cabeca {
+  0%, 100%   {background-position: right 0;}
+  15%, 95% {background-position: 0 0;}
+}
+.mao {
+    position: absolute;
+    z-index:3;
+    top:300px;
+    left:2%;
+    width: 102px;
+    height:174px;
+    background: transparent url(../img/maos.png) 0 0;
+}
+.mao-d {
+    left: auto;
+    right:2%;
+    background-position: right top;
+}
+.sanfona {
+    height: 174px;
+    margin:0 102px;
+    position:absolute;
+    z-index:4;
+    top: 300px;
+    left: 2%;
+    right: 2%;
+    background:transparent url(../img/sanfona.png) 0 0;
+    background-size: 10% 100%;
+}
+.dialog {
+  text-align: center;
+  font: normal normal 16px/1em arial;
+  color:#999;
+  position:absolute;
+  z-index:10;
+  left: 50%;
+  top:350px;
+  margin-left: -250px;
+  display:inline-block;
+  width: 400px;
+  padding:20px 20px;
+  background: rgba(255,255,255,.8);
+  border:1px solid #f5f5f5;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);
+  border-radius: 10px;
+}
+.dialog-l, .dialog-r {
+  font-size:30px;
+  position:absolute;
+  top: 30%;
+}
+.dialog-l {
+  -webkit-animation: dialog-l 1s infinite linear 0s;
+     -moz-animation: dialog-l 1s infinite linear 0s;
+       -o-animation: dialog-l 1s infinite linear 0s;
+          animation: dialog-l 1s infinite linear 0s;
+}
+@-webkit-keyframes dialog-l {
+  0%, 100%   {left: 20px;}
+  50% {left:10px;}
+}
+@-moz-keyframes dialog-l {
+  0%, 100%   {left: 20px;}
+  50% {left:10px;}
+}
+@-o-keyframes dialog-l {
+  0%, 100%   {left: 20px;}
+  50% {left:10px;}
+}
+@keyframes dialog-l {
+  0%, 100%   {left: 20px;}
+  50% {left:10px;}
+}
+.dialog-r {
+  -webkit-animation: dialog-r 1s infinite linear 0s;
+     -moz-animation: dialog-r 1s infinite linear 0s;
+       -o-animation: dialog-r 1s infinite linear 0s;
+          animation: dialog-r 1s infinite linear 0s;
+}
+@-webkit-keyframes dialog-r {
+  0%, 100%   {right: 20px;}
+  50% {right:10px;}
+}
+@-moz-keyframes dialog-r {
+  0%, 100%   {right: 20px;}
+  50% {right:10px;}
+}
+@-o-keyframes dialog-r {
+  0%, 100%   {right: 20px;}
+  50% {right:10px;}
+}
+@keyframes dialog-r {
+  0%, 100%   {right: 20px;}
+  50% {right:10px;}
+}
