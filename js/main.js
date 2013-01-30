@@ -11,12 +11,16 @@ $(document).ready(function() {
   var audioIncrease = $('#sanfona-increase'),
       audioDecrease = $('#sanfona-decrease');
 
+  var dialog = $('.dialog');
+
 // =====================================
 // Change audio according to screen size
 
   window.onresize = resize;
 
   function resize() {
+
+    dialog.fadeOut();
 
     newScreenSize = window.innerWidth;
 
