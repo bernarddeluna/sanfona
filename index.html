@@ -6,25 +6,28 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>Responsive Sanfona</h1>
-<span class="credits">Made by <a href="https://twitter.com/bernarddeluna" title="Bernard De Luna">Bernard De Luna</a> e <a href="https://twitter.com/zenorocha" title="Zeno Rocha">Zeno Rocha</a> 
-Illustration by <a href="https://twitter.com/gabrielrunners" title="Gabriel Lamas">Gabriel Lamas</a></span>
-<div class="dialog">
-  Redimensione seu browser para tocar a sanfona.
-  <span class="dialog-l">&lsaquo;</span>
-  <span class="dialog-r">&rsaquo;</span>
-</div>
 
-<div class="maos">
-  <div class="mao mao-e"></div>
-  <div class="mao mao-d"></div>
-</div>
-<div class="sanfona"></div>
-<div class="cabeca"></div>
-<div class="boneco"></div>
+  <h1>Responsive Sanfona</h1>
+  <span class="credits">Made by <a href="https://twitter.com/bernarddeluna" title="Bernard De Luna">Bernard De Luna</a> and <a href="https://twitter.com/zenorocha" title="Zeno Rocha">Zeno Rocha</a>.
+  Illustration by <a href="https://twitter.com/gabrielrunners" title="Gabriel Lamas">Gabriel Lamas</a></span>
 
-  <audio id="sanfona-audio" src="audio/0-increasing.wav" loop="loop"></audio>
-  <audio src="audio/baiao_1_100bpm.mp3" autoplay loop="loop"></audio>
+  <div class="dialog">
+    Resize your browser window.
+    <span class="dialog-l">&lsaquo;</span>
+    <span class="dialog-r">&rsaquo;</span>
+  </div>
+
+  <div class="maos">
+    <div class="mao mao-e"></div>
+    <div class="mao mao-d"></div>
+  </div>
+  <div class="sanfona"></div>
+  <div class="cabeca"></div>
+  <div class="boneco"></div>
+
+  <audio id="sanfona-increase" src="audio/increasing.mp3" loop="loop"></audio>
+  <audio id="sanfona-decrease" src="audio/decreasing.mp3" loop="loop"></audio>
+  <audio src="audio/bg.mp3" autoplay loop="loop"></audio>
 
   <script src="js/jquery-1.9.0.min.js"></script>
   <script src="js/jquery.resizestop.js"></script>

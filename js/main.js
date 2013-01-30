@@ -8,11 +8,8 @@ $(document).ready(function() {
       newScreenSize = 0;
 
   // Audio
-  var audio = $('#sanfona-audio'),
-      audioPlayer = audio[0],
-      currentMusic = '';
-
-  audioPlayer.volume = 1;
+  var audioIncrease = $('#sanfona-increase'),
+      audioDecrease = $('#sanfona-decrease');
 
 // =====================================
 // Change audio according to screen size
@@ -25,25 +22,32 @@ $(document).ready(function() {
 
     // Increasing screen size
     if (newScreenSize > oldScreenSize) {
-      changeAudio('audio/0-increasing.wav');
+      audioIncrease.addClass('active');
+      audioDecrease.removeClass('active');
     }
     // Decreasing screen size
     else if (newScreenSize < oldScreenSize) {
-      changeAudio('audio/0-decreasing.wav');
+      audioDecrease.addClass('active');
+      audioIncrease.removeClass('active');
     }
 
     oldScreenSize = newScreenSize;
 
+    toggleAudio();
+
   }
 
-  function changeAudio(music) {
+  function toggleAudio() {
 
-    if (currentMusic != music) {
-      currentMusic = music;
-      $(audio[0]).attr('src', music);
+    if (audioIncrease.hasClass('active')) {
+      audioIncrease[0].play();
+      audioDecrease[0].pause();
+      audioDecrease[0].currentTime = 0;
+    } else {
+      audioDecrease[0].play();
+      audioIncrease[0].pause();
+      audioIncrease[0].currentTime = 0;
     }
-
-    turnOn();
 
   }
 
@@ -54,13 +58,16 @@ $(document).ready(function() {
       turnOff();
   });
 
-  function turnOn() {
-    audioPlayer.play();
-  }
-
   function turnOff() {
-    audioPlayer.pause();
-    audioPlayer.currentTime = 0;
+
+    if (audioIncrease.hasClass('active')) {
+      audioIncrease[0].pause();
+      audioIncrease[0].currentTime = 0;
+    } else {
+      audioDecrease[0].pause();
+      audioDecrease[0].currentTime = 0;
+    }
+
   }
 
 });
