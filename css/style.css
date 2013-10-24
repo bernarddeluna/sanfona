@@ -46,7 +46,7 @@ h1 {
 .credits a {color:#369;}
 .boneco {
     position:relative;
-    z-index:3;
+    z-index:2;
     left: -32px;
     top:-3px;
     margin: 0 auto;
